@@ -28,10 +28,6 @@
       <version>13.2.0</version>
     </dependency>
     <dependency>
-      <groupId>com.axonivy.ivy.spi</groupId>
-      <artifactId>ivy-process-extension-spi</artifactId>
-    </dependency>
-    <dependency>
       <groupId>com.axonivy.ivy.api</groupId>
       <artifactId>ivy-runtime</artifactId>
       <scope>provided</scope>
