@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:f="jakarta.faces.core"
+  xmlns:h="jakarta.faces.html"
+  xmlns:ui="jakarta.faces.facelets"
+  xmlns:ic="http://ivyteam.ch/jsf/component"
+  xmlns:p="primefaces"
+  xmlns:pe="primefaces.extensions">
+<h:body>
+  <ui:composition template="/layouts/frame-10-full-width.xhtml">
+    <ui:define name="title">#{ivy.cms.co('/Labels/Payment')}</ui:define>
+    <ui:define name="content">
+
+      <h3>#{ivy.cms.co('/Labels/Payment')}</h3>
+
+      <h:form id="form">
+        <p:panelGrid columns="3" layout="grid"
+          styleClass="ui-panelgrid-blank ui-fluid"
+          columnClasses="ui-g-12 ui-md-4 ui-lg-4 py-0 pl-0, ui-g-12 ui-md-4 ui-lg-4 py-0, ui-g-12 ui-md-4 ui-lg-4 py-0 pr-0">
+
+          <p:outputLabel for="product-name"
+            value="#{ivy.cms.co('/Labels/ProductName')}" />
+          <p:outputLabel for="product-price"
+            value="#{ivy.cms.co('/Labels/ProductPrice')}" />
+          <p:outputLabel for="product-quantity"
+            value="#{ivy.cms.co('/Labels/ProductQuantity')}" />
+
+          <p:inputText id="product-name" value="#{data.name}"
+            disabled="true" />
+          <p:inputNumber id="product-price" decimalPlaces="0"
+            symbol=" $" symbolPosition="s" decimalSeparator="."
+            thousandSeparator="," minValue="0" value="#{data.price}"
+            maxValue="1000000" disabled="true" />
+
+          <p:inputNumber id="product-quantity" decimalPlaces="0"
+            minValue="0" value="#{data.quantity}" maxValue="10000"
+            disabled="true" />
+        </p:panelGrid>
+
+        <ic:com.axonivy.utils.caseprocessviewer.component.CaseProcessViewer
+          header="#{ivy.cms.co('/Labels/PurchaseRequestCase')}" />
+
+        <br />
+        <div class="command-btns">
+          <p:commandLink id="cancel"
+            actionListener="#{ivyWorkflowView.cancel()}" process="@this"
+            value="#{ivy.cms.co('/Labels/Cancel')}" />
+          <p:commandButton id="back" actionListener="#{logic.backToEnterPurchaseRequestValues}"
+            value="#{ivy.cms.co('/Labels/BackToSubmitPurchaseRequest')}"
+            icon="pi pi-arrow-left" />
+          <p:commandButton id="payment" actionListener="#{logic.close}"
+            value="#{ivy.cms.co('/Labels/Payment')}" update="form"
+            icon="pi pi-check" />
+        </div>
+      </h:form>
+
+    </ui:define>
+  </ui:composition>
+</h:body>
+
+</html>

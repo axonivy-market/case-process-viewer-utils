@@ -1,0 +1,25 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0/project/data-class.json",
+  "simpleName" : "PurchaseRequestDemoData",
+  "namespace" : "com.axonivy.utils.caseprocessviewer.demo.PurchaseRequestDemo",
+  "fields" : [ {
+    "name" : "quantity",
+    "type" : "Number",
+    "modifiers" : [ ]
+  }, {
+    "name" : "name",
+    "modifiers" : [ ]
+  }, {
+    "name" : "price",
+    "type" : "Number",
+    "modifiers" : [ ]
+  }, {
+    "name" : "isReadOnly",
+    "type" : "Boolean",
+    "modifiers" : [ ]
+  }, {
+    "name" : "isBackToSubmitPurchaseRequest",
+    "type" : "Boolean",
+    "modifiers" : [ ]
+  } ]
+}

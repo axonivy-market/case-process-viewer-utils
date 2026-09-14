@@ -1,0 +1,21 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0/project/data-class.json",
+  "simpleName" : "SummaryDemoData",
+  "namespace" : "com.axonivy.utils.caseprocessviewer.demo.SummaryDemo",
+  "fields" : [ {
+    "name" : "quantity",
+    "type" : "Number",
+    "modifiers" : [ ]
+  }, {
+    "name" : "name",
+    "modifiers" : [ ]
+  }, {
+    "name" : "price",
+    "type" : "Number",
+    "modifiers" : [ ]
+  }, {
+    "name" : "isPaid",
+    "type" : "Boolean",
+    "modifiers" : [ ]
+  } ]
+}

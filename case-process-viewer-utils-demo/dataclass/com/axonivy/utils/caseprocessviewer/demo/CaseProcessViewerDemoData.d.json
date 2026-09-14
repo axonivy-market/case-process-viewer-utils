@@ -1,0 +1,20 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0/project/data-class.json",
+  "simpleName" : "CaseProcessViewerDemoData",
+  "namespace" : "com.axonivy.utils.caseprocessviewer.demo",
+  "fields" : [ {
+    "name" : "productName"
+  }, {
+    "name" : "price",
+    "type" : "Number"
+  }, {
+    "name" : "quantity",
+    "type" : "Number"
+  }, {
+    "name" : "isPaid",
+    "type" : "Boolean"
+  }, {
+    "name" : "isBackToSubmitPurchaseRequest",
+    "type" : "Boolean"
+  } ]
+}
