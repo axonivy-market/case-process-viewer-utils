@@ -3,9 +3,9 @@ package com.axonivy.utils.caseprocessviewer.managedbean;
 import java.io.Serializable;
 import java.util.Optional;
 
-import javax.annotation.PostConstruct;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import jakarta.annotation.PostConstruct;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 
 import org.apache.commons.lang3.StringUtils;
 import org.primefaces.PF;
@@ -24,7 +24,7 @@ import ch.ivyteam.ivy.cm.ContentObject;
 import ch.ivyteam.ivy.cm.exec.ContentManagement;
 import ch.ivyteam.ivy.environment.Ivy;
 
-@ManagedBean
+@Named
 @ViewScoped
 public class CaseProcessViewerBean implements Serializable {
 
