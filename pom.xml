@@ -3,7 +3,7 @@
   <groupId>com.axonivy.utils.caseprocessviewer</groupId>
   <name>case-process-viewer-utils</name>
   <artifactId>case-process-viewer-utils-modules</artifactId>
-  <version>13.2.4-SNAPSHOT</version>
+  <version>14.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
